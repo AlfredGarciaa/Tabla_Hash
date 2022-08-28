@@ -79,4 +79,19 @@ public:
 			}
 		}
 	}
+
+	//Asignamos una funcion compra para los elementos enlazadas en la lista
+	void compra(tipo e, int c) 
+	{
+		Nodo<tipo> *tmp = buscar(e);
+		int pos = funcionHashResiduo(e);
+		if (tmp != NULL) {
+			tmp->setCant(tmp->getCant() + c);
+		}
+		else
+		{
+			insertarL8(e);
+			vec[pos]->
+		}
+	}
 };
