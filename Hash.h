@@ -1,0 +1,82 @@
+#pragma once
+#include <iostream>
+#include "Lista8.h"
+#include <math.h>
+#include <fstream>
+//Cambiamos el tamaño maximo
+#define TAM 10000
+using namespace std;
+
+template <class T>
+class Hash
+{
+private:
+	Lista8<string>* tablaHash[TAM];
+
+public:
+	Hash()
+	{
+		for (int i = 0; i < TAM; i++)
+		{
+			this->tablaHash[i] = new Lista8<string>;
+		}
+	}
+
+	int codigoAscii(char elem)
+	{
+		int i;
+		i = elem;
+		return i;
+	}
+
+	int obtenerPosicion(string palabra)
+	{
+		int pos = 0;
+		for (int i = 0; i < palabra.length(); i++)
+		{
+			pos = pos + (palabra[i] * pow(2, i));
+		}
+		return pos % TAM;
+	}
+
+	void insertarEnTablaHash(string palabra)
+	{
+		int pos = obtenerPosicion(palabra);
+		if (pos < 0)
+		{
+			pos = -1 * pos;
+		}
+		tablaHash[pos]->InsertarContando(palabra);
+	}
+
+	void leerArchivo()
+	{
+		ifstream archivo("gabriel_garcia_marquez.txt");
+		string palabra;
+		while (!archivo.eof())
+		{
+			archivo >> palabra;
+			insertarEnTablaHash(palabra);
+		}
+		archivo.close();
+	}
+
+	void mostrarPalabras()
+	{
+		for (int i = 0; i < TAM - 1; i++)
+		{
+			tablaHash[i]->mostrarLista();
+		}
+	}
+
+	void buscar(string palabra)
+	{
+		if (tablaHash[obtenerPosicion(palabra)] != NULL)
+		{
+			if (tablaHash[obtenerPosicion(palabra)]->getPrimero() != NULL && tablaHash[obtenerPosicion(palabra)]->BuscarNoRecursivo(palabra))
+			{
+				tablaHash[obtenerPosicion(palabra)]->mostrarLista();
+			}
+		}
+	}
+};
