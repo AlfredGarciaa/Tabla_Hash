@@ -26,6 +26,13 @@ public:
     void setPrecio(int p) {
 		precio = p;
 	}
+    //Ahora guardamos en la funcion cantidad
+	void setCant(int c) {
+		cant = c;
+	}
+	int getCant() {
+		return cant;
+	}
 	int getPrecio() {
 		return precio;
 	}
