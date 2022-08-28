@@ -49,7 +49,8 @@ public:
 		tablaHash[pos]->InsertarContando(palabra);
 	}
 
-	void leerArchivo()
+	//No leera de momento
+	/*void leerArchivo()
 	{
 		ifstream archivo("gabriel_garcia_marquez.txt");
 		string palabra;
@@ -59,7 +60,7 @@ public:
 			insertarEnTablaHash(palabra);
 		}
 		archivo.close();
-	}
+	}*/
 
 	void mostrarPalabras()
 	{

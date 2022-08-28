@@ -11,12 +11,17 @@ int main()
 	string palabra;
 	do
 	{
-		cout << "1.- Insertar Contando" << endl;
-		cout << "2.- Buscar" << endl;
-		cout << "3.- Mostrar" << endl;
-		cout << "4.- Leer txt" << endl;
-		cout << "0.- Salir" << endl;
-		cout << "Ingrese una opcion" << endl;
+		//Cambiamos la interfaz del menu
+		printf("\n\t\t\t\t<<<<<   FERRETERIA   >>>>>\n\n");
+		printf("\t\t\t1.  Leer Archivo e insertar en la HASH.\n");
+		printf("\t\t\t2.  Insertar.\n");
+		printf("\t\t\t3.  Eliminar.\n");
+		printf("\t\t\t4.  Buscar.\n");
+		printf("\t\t\t5.  Comprar.\n");
+		printf("\t\t\t6.  Vender.\n");
+		printf("\t\t\t7.  Mostrar.\n");
+		printf("\t\t\t8.  Salir.\n\n");
+		printf("\nQue opcion desea realizar!!! [1-8]: ");
 		cin >> op;
 		system("CLS");
 		switch (op)

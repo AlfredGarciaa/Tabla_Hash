@@ -164,7 +164,8 @@ public:
 		}
 	}
 
-	void InsertarContando(T elem)
+	//Censurado
+	/*void InsertarContando(T elem)
 	{
 		int aux = 0;
 		if (Primer == NULL)
@@ -190,7 +191,7 @@ public:
 			aux = 1;
 			tamanio++;
 		}
-	}
+	}*/
 
 	int getTam()
 	{
