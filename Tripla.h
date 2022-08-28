@@ -52,8 +52,8 @@ public:
 
 	void mostrar()
 	{
-		//Mostramos el elemento
-		cout << elem << " - " << cont << endl;
+		//Censuramos
+		//cout << elem << " - " << cont << endl;
 		cout << elem << endl;
 	}
 

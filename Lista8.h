@@ -35,8 +35,8 @@ public:
 		}
 	}
 
-	//Censurado
-	/*void InsertarFinal(T elem)
+	//Habilitamos
+	void InsertarFinal(T elem)
 	{
 		if (Primer == NULL)
 		{
@@ -50,7 +50,7 @@ public:
 			Ultimo->setSiguiente(nueva_Tripla);
 			Ultimo = nueva_Tripla;
 		}
-	}*/
+	}
 
 	void EliminarFinal()
 	{
@@ -71,8 +71,8 @@ public:
 		}
 	}
 
-	//Censurado
-	/*void EliminarPrincipio()
+	//Habilitamos
+	void EliminarPrincipio()
 	{
 		if (Primer != NULL)
 		{
@@ -91,7 +91,7 @@ public:
 				Ultimo = NULL;
 			}
 		}
-	}*/
+	}
 
 	bool BuscarNoRecursivo(T elem)
 	{

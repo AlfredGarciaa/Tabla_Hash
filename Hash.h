@@ -94,4 +94,20 @@ public:
 			vec[pos]->
 		}
 	}
+
+	//Añadimos otra funcionalidad mas practica
+	//la de multiplicar
+	int funcionHashMultiplicacion(string s)
+	{
+		int mult, piso, fraccion, pos, tmp;
+		tmp = 0;
+		for (int i = 0; i < s.size(); i++) {
+			tmp = tmp + (s[i] * 2 ^ i);
+		}
+		mult = (tmp * (sqrt(5) - 1) / 2);
+		piso = floor(mult);
+		fraccion = mult - floor;
+		pos = floor(fraccion * capacidad);
+		return pos;
+	}
 };
